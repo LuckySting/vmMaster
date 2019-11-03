@@ -1,6 +1,6 @@
 ////////// LEDs: //////////
 // LED00
-#define LedNum 8
+#define LedNum 24
 #define LedPin 19
 
 
@@ -40,7 +40,6 @@
 
 
 ////////// Slots: //////////
-#define SlotsDirPin 41
 #define LED_PIN 3
 
 // ender:
@@ -72,12 +71,60 @@
 #define Slot02DirPin 34
 #define LED02 4
 
+///////// Slot 03
+#define Slot03EnPin 30
+#define Slot03StepPin 36
+#define Slot03DirPin 34
+#define LED03 6
+
+///////// Slot 10
+#define Slot10EnPin A8
+#define Slot10StepPin 46
+#define Slot10DirPin 48
+#define LED10 14
+
+///////// Slot 11
+#define Slot11EnPin 24
+#define Slot11StepPin 26
+#define Slot11DirPin 28
+#define LED11 12
+
+///////// Slot 12
+#define Slot12EnPin 30
+#define Slot12StepPin 36
+#define Slot12DirPin 34
+#define LED12 10
+
+///////// Slot 13
+#define Slot13EnPin 30
+#define Slot13StepPin 36
+#define Slot13DirPin 34
+#define LED13 8
+
+///////// Slot 20
+#define Slot20EnPin A8
+#define Slot20StepPin 46
+#define Slot20DirPin 48
+#define LED20 16
+
+///////// Slot 21
+#define Slot21EnPin 24
+#define Slot21StepPin 26
+#define Slot21DirPin 28
+#define LED21 18
+
+///////// Slot 22
+#define Slot22EnPin 30
+#define Slot22StepPin 36
+#define Slot22DirPin 34
+#define LED22 20
+
+///////// Slot 23
+#define Slot23EnPin 30
+#define Slot23StepPin 36
+#define Slot23DirPin 34
+#define LED23 22
+
 
 ///////// masterTerminal /////////
 #define baudRate 9600
-#define PARK_Y 1
-#define UNLOAD_SLOT00 2
-#define TOGGLE_GREEN00 3
-#define IS_DOOR_CLOSED 4
-#define CLOSE_THE_DOOR 5
-#define OPEN_THE_DOOR 6

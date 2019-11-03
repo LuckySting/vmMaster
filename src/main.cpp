@@ -64,6 +64,51 @@ void masterTerminal::toggleGreen(uint8_t slotCode){
     delay(200);
     break;
   
+  case 0x03:
+    led.greenOn(LED03, leds);
+    delay(200);
+    break;
+
+  case 0x10:
+    led.greenOn(LED10, leds);
+    delay(200);
+    break;
+
+  case 0x11:
+    led.greenOn(LED11, leds);
+    delay(200);
+    break;
+
+  case 0x12:
+    led.greenOn(LED12, leds);
+    delay(200);
+    break;
+  
+  case 0x13:
+    led.greenOn(LED13, leds);
+    delay(200);
+    break;
+
+  case 0x20:
+    led.greenOn(LED20, leds);
+    delay(200);
+    break;
+
+  case 0x21:
+    led.greenOn(LED21, leds);
+    delay(200);
+    break;
+
+  case 0x22:
+    led.greenOn(LED22, leds);
+    delay(200);
+    break;
+  
+  case 0x23:
+    led.greenOn(LED23, leds);
+    delay(200);
+    break;
+  
   default:
     led.off(leds);
     delay(200);
@@ -75,11 +120,12 @@ void masterTerminal::toggleRed(uint8_t slotCode){
   Ok.set(HIGH);
 }
 void masterTerminal::getItem(uint8_t slotCode){
+  Block.set(HIGH);
   switch (slotCode)
   {
   case 0x00:
     slotE.switchDrive(Slot00EnPin, Slot00StepPin, Slot00DirPin);
-    to2Lvl.set(HIGH);
+    to1Lvl.set(HIGH);
     break;
 
   case 0x01:
@@ -92,6 +138,51 @@ void masterTerminal::getItem(uint8_t slotCode){
     to1Lvl.set(HIGH);
     break;
   
+  case 0x03:
+    slotE.switchDrive(Slot03EnPin, Slot03StepPin, Slot03DirPin);
+    to1Lvl.set(HIGH);
+    break;
+
+  case 0x10:
+    slotE.switchDrive(Slot10EnPin, Slot10StepPin, Slot10DirPin);
+    to2Lvl.set(HIGH);
+    break;
+
+  case 0x11:
+    slotE.switchDrive(Slot11EnPin, Slot11StepPin, Slot11DirPin);
+    to2Lvl.set(HIGH);
+    break;
+
+  case 0x12:
+    slotE.switchDrive(Slot12EnPin, Slot12StepPin, Slot12DirPin);
+    to2Lvl.set(HIGH);
+    break;
+  
+  case 0x13:
+    slotE.switchDrive(Slot13EnPin, Slot13StepPin, Slot13DirPin);
+    to2Lvl.set(HIGH);
+    break;
+
+  case 0x20:
+    slotE.switchDrive(Slot20EnPin, Slot20StepPin, Slot20DirPin);
+    to3Lvl.set(HIGH);
+    break;
+
+  case 0x21:
+    slotE.switchDrive(Slot21EnPin, Slot21StepPin, Slot21DirPin);
+    to3Lvl.set(HIGH);
+    break;
+
+  case 0x22:
+    slotE.switchDrive(Slot22EnPin, Slot22StepPin, Slot22DirPin);
+    to3Lvl.set(HIGH);
+    break;
+  
+  case 0x23:
+    slotE.switchDrive(Slot23EnPin, Slot23StepPin, Slot23DirPin);
+    to3Lvl.set(HIGH);
+    break;
+
   default:
     break;
   }
@@ -114,7 +205,7 @@ void setup() {
   Slot.set(LOW);
   Ok.set(LOW);
   Oops.set(LOW);
-  Serial.begin(9600);
+  Serial.begin(baudRate);
   led.off(leds);
   delay(200);
 }
